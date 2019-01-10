@@ -1,0 +1,255 @@
+
+.title{
+  text-align: center;
+  font-size: 0.35rem;
+  padding-top: 0.6rem;
+}
+.text{
+  text-align: center;
+  font-size: 0.2rem;
+  color:#A0A0A0;
+}
+.stepProgress{
+  width: 90%;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  border: 0.02rem solid #ccc;
+  margin: 0.15rem 5%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .step{
+    width: 32%;
+    margin: 0px 1%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.2rem;
+    text-align: center;
+    color:#2D2D2D;
+  }
+  .active{
+    background: -webkit-linear-gradient(left, #14A2DE , #146CD2);
+    background: -o-linear-gradient(right, #14A2DE,  #146CD2);
+    background: -moz-linear-gradient(right, #14A2DE,  #146CD2);
+    background: linear-gradient(to right, #14A2DE ,  #146CD2);
+    border-radius: 0.2rem;
+    color: #fff;
+  }
+}
+.phoneBox{
+  margin: 0.1rem 0;
+  width: 74%;
+  height:0.7rem;
+  margin-left: 13%;
+  border-bottom: 0.02rem solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+.region{
+  height: 0.4rem;
+  line-height: 0.4rem;
+  background: #F1F1F1;width: 26%;
+  width: 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.25rem;
+  text-align: center;
+  margin-right: 0.1rem;
+.bottom-arrow{
+  position:absolute;
+  top:10px;
+  left:0px;
+  border-width:100px;
+  border-color:#000000 transparent transparent transparent;
+  height:0;
+  width:0;
+  font-size:0;
+  _border-color:#000000 tomato tomato tomato ; /*边框透明色 For IE6-*/
+  _filter:chroma(color=tomato);/*边框透明色 For IE6-*/
+}
+}
+.phoneNumber{
+  height: 0.5rem;
+  flex: 1;
+  //overflow: hidden;
+  margin: 0 0.1rem;
+  .phoneNumberInner{
+    padding-left: 0.1rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    font-size: 0.3rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: -0.1rem;
+  }
+}
+}
+.keyboard{
+  width: 100%;
+  margin-top: 0.2rem;
+  border-top: 0.01rem solid #bbb;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+/*min-height: 2rem;*/
+.keyItem{
+  /*width: 32%;*/
+  border-bottom: 0.01rem solid #bbb;
+  font-size: 0.3rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  text-align: center;
+}
+.keyItem:nth-child(3n+1){
+  width:32%;
+  border-left: 0px;
+  border-right: 0.01rem solid #bbb;
+}
+.keyItem:nth-child(3n+2){
+  min-width: 32%;
+  flex: 1;
+}
+.keyItem:nth-child(3n+3){
+  border-right: 0px;
+  width:32%;
+  border-left: 0.01rem solid #bbb;
+}
+.active{
+  background: #eee;
+}
+}
+.submitBox{
+  width: 100%;
+  text-align: center;
+.submitBtn{
+  margin: 0.3rem auto;
+  font-size: 0.2rem;
+  width: 60%;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #fff;
+  background: -webkit-linear-gradient(left, #14A2DE , #146CD2);
+  background: -o-linear-gradient(right, #14A2DE,  #146CD2);
+  background: -moz-linear-gradient(right, #14A2DE,  #146CD2);
+  background: linear-gradient(to right, #14A2DE ,  #146CD2);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#14A2DE', endColorstr='#146CD2',GradientType=0 );
+  border-radius: 0.3rem;
+}
+  .submitBtn:hover{
+    background: -webkit-linear-gradient(left, #14A2AE , #146CA2);
+    background: -o-linear-gradient(right, #14A2AE,  #146CA2);
+    background: -moz-linear-gradient(right, #14A2AE,  #146CA2);
+    background: linear-gradient(to right, #14A2AE ,  #146CA2);
+  }
+}
+.regionMask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0px;
+  left: 0;
+  background: rgba(0,0,0,0.7);
+}
+.regionBox{
+  position: absolute;
+  width: 80%;
+  top:4%;
+  left: 10%;
+  height:96%;
+  .regionContainer{
+    height:82%;
+    border-radius: 0.1rem;
+    background-color: #ffffff;
+    font-size: 0.3rem;
+    overflow: hidden;
+    .countryTitle{
+      width: 100%;
+      height: 1.0rem;
+      line-height: 1.0rem;
+      text-align: left;
+      font-weight: 600;
+      padding-left: 0.1rem;
+      margin: 0;
+    }
+    .splitLine{
+      height: 0.01rem;
+      background-color: #ccc;
+    }
+    .regionList{
+      width: calc( 100% + 0.15rem );
+      height: calc( 100% - 1.0rem );
+      overflow-x: hidden;
+      overflow-y: auto;
+      .regionItem{
+        width: 100%;
+        height: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 0.25rem;
+        border-bottom: 0.01rem solid #ddd;
+        .regionPic{
+          width:0.5rem;
+          margin: 0 0.2rem;
+        }
+        .regionName{
+          flex:1;
+          color: #999;
+          font-weight: 400;
+        }
+        .regionNumber{
+          width: 1rem;
+          text-align: right;
+          margin-right: 0.2rem;
+          font-weight: 600;
+        }
+      }
+      .regionItemActive{
+        background: #E9F1FB;
+      }
+    }
+  }
+  .cancelBtn{
+    margin: 0.2rem auto;
+    width: 0.6rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 0.3rem;
+    background-color: rgba(0,0,0,0.9);
+    font-size: 0.3rem;
+  }
+}
+//.regionBox{
+//  position: absolute;
+//  width: 80%;
+//  top:40%;
+//  left: 10%;
+//  height:20%;
+//  font-size: 0.4rem;
+//  color:#fff;
+//  text-align: center;
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
+.regionBox2{
+  position: absolute;
+  width: 80%;
+  top:40%;
+  left: 10%;
+  height:20%;
+  min-height: 250px;
+  font-size: 0.4rem;
+  color:#fff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../assets/img/tip_back.png);
+  background-size: 100% 100%;
+}

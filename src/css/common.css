@@ -1,0 +1,58 @@
+.down-arrow {
+  display :inline-block;
+  position: relative;
+  width: 0.2rem;
+  height: 0.3rem;
+  margin-right: 0rem;
+}
+
+.down-arrow::after {
+  display: inline-block;
+  content: " ";
+  height: 0.09rem;
+  width: 0.09rem;
+  border-width: 0 0.01rem 0.01rem 0;
+  border-color: #999999;
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+  transform-origin: center;
+  transition: transform .3s;
+  position: absolute;
+  top: 50%;
+  left: 0.1rem;
+  margin-top: -0.02rem;
+}
+   .down-arrow.active::after {
+     transform-origin: center;
+     transform: rotate(-135deg);
+     transition: transform .3s;
+   }
+
+   .indexBtn{
+     font-size: 0.2rem;
+     width: 1.8rem;
+     height: 0.5rem;
+     line-height: 0.5rem;
+     position: fixed;
+     bottom: 0.7rem;
+     right: 2.1rem;
+     border: 0.01rem solid #aaa;
+     border-radius: 0.25rem;
+     text-align: center;
+     background: #14A2DE;
+     color:#fff
+   }
+   .previousBtn{
+     font-size: 0.2rem;
+     width: 1.8rem;
+     height: 0.5rem;
+     line-height: 0.5rem;
+     position: fixed;
+     bottom: 0.7rem;
+     right: 0.1rem;
+     border: 0.01rem solid #aaa;
+     border-radius: 0.25rem;
+     text-align: center;
+     background: #14A2DE;
+     color:#fff
+   }

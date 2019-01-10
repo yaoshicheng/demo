@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>paypal</title>
+  </head>
+  <style>
+    body{
+       background: url("src/assets/img/background.png");
+       background-size: 100% 100%;
+       margin: 0px !important;
+     }
+    html.wind-vw-mode{
+      width: 100%;
+      min-width: 320px;
+      font-size: 100px;
+      font-size: -webkit-calc((100vw * 2) / 8);
+      font-size: calc((100vw * 2) / 8);
+      overflow-y: scroll;
+    }
+    html.wind-vw-mode body{
+      -webkit-font-smoothing: antialiased;
+      margin-left: calc(100vw - 100%);
+      margin-left: -webkit-calc(100vw - 100%);
+      min-width: 320px;
+    }
+    html.wind-vw-mode :root {
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    html.wind-vw-mode :root body {
+      position: absolute;
+    }
+    @media (max-width: 319px){
+      html.wind-vw-mode {
+        font-size: 75px;
+      }
+    }
+    @media (max-width: 1023px) and (min-width: 768px) {
+      html.wind-vw-mode {
+        font-size: -webkit-calc(150px + (100vw - 768px) / (1024 - 768) * (200 - 150));
+        font-size: calc(150px + (100vw - 768px) / (1024 - 768) * (200 - 150));
+      }
+    }
+    @media (max-width: 1199px) and (min-width: 1024px){
+      html.wind-vw-mode {
+        font-size: -webkit-calc(200px + (100vw - 1024px) / (1200 - 1024) * (266 - 200));
+        font-size: calc(200px + (100vw - 1024px) / (1200 - 1024) * (266 - 200));
+      }
+    }
+    @media (min-width: 1200px){
+      html.wind-vw-mode {
+        font-size:100px;
+      }
+    }
+  </style>
+  <body oncontextmenu = "return false" onselectstart = "return false" oncopy = "return false" >
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+    !(function reFrame(){
+      document.documentElement.classList.add("wind-vw-mode")
+      var vp = document.getElementsByName("viewport");
+      if(vp.length > 0) {
+        vp[0].setAttribute("content","width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,viewport-fit=cover");
+      } else {
+        vp = document.createElement("meta");
+        vp.setAttribute("name","viewport");
+        vp.setAttribute("content","width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,viewport-fit=cover");
+        document.head.insertBefore(vp,document.head.firstChild);
+      }
+      return;
+    })();
+  </script>
+</html>
